@@ -1,3 +1,6 @@
 [submodule "FeatureExtractor"]
 	path = FeatureExtractor
 	url = https://github.com/fabioprev/FeatureExtractor.git
+[submodule "ImageExtractor"]
+	path = ImageExtractor
+	url = https://github.com/fabioprev/ImageExtractor.git
