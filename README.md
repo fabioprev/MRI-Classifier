@@ -5,6 +5,9 @@ Thank you for using our AlzheimerClassifier software. In the case you downloaded
 directiories here the solution to fix your problem. Since the Github repository contains two
 sub-modules you need to recursively download it by typing the following command:
 
+  - cd <AlzheimerClassifier-root>
+  - cd ..
+  - rm -rf AlzheimerClassifier
   - git clone --recursive https://github.com/fabioprev/AlzheimerClassifier
 
 While for pulling the latest modifications to any of the sub-modules, type in the terminal:
