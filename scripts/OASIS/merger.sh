@@ -1,26 +1,28 @@
 #!/bin/bash
 
-if [ $# -lt 3 ]; then
-	echo "Usage: ./merger.sh <section> <first-class> <second-class> [ <third-class> <fourth-class> ]"
+# This script should NOT be modified by non expert users. Modifying it is quote risky so watch out!
+
+if [ $# -lt 4 ]; then
+	echo "Usage: ./merger.sh <dataset-root> <section> <first-class> <second-class> [ <third-class> <fourth-class> ]"
 	
 	exit -1
 fi
 
-if [ $# -gt 5 ]; then
-	echo "Usage: ./merger.sh <section> <first-class> <second-class> [ <third-class> <fourth-class> ]"
+if [ $# -gt 6 ]; then
+	echo "Usage: ./merger.sh <dataset-root> <section> <first-class> <second-class> [ <third-class> <fourth-class> ]"
 	
 	exit -1
 fi
 
-section=$1
+section=$2
 
-counter=2
+counter=3
 shellCommand=""
 classes=""
 numberOfFeatures=0
 
 while [ $counter -le $# ]; do
-	shellCommand="ClassPatientFiles/"${!counter}"_section_"$section".csv "
+	shellCommand=$1"/ClassPatientFiles/"${!counter}"_section_"$section".csv "
 	
 	numberOfFeatures=$(awk -F ',' 'BEGIN{print "count", "lineNum"}{print gsub(/,/,"") "\t" NR}' $shellCommand | awk 'NR==2' | awk '{print $1}')
 	
@@ -32,7 +34,7 @@ done
 shellCommand="cat "
 
 while [ $counter -le $# ]; do
-	shellCommand=$shellCommand"ClassPatientFiles/"${!counter}"_section_"$section".csv "
+	shellCommand=$shellCommand$1"/ClassPatientFiles/"${!counter}"_section_"$section".csv "
 	classes=$classes${!counter}
 	
 	if [ $counter -lt $# ]; then
@@ -42,7 +44,7 @@ while [ $counter -le $# ]; do
 	let counter=$counter+1
 done
 
-shellCommand=${shellCommand}">> ClassifierFiles/"$classes"_section_"$section".csv"
+shellCommand=${shellCommand}" >> "$1"/ClassifierFiles/"$classes"_section_"$section".csv"
 
 counter=1
 variables="patientId,"
@@ -53,9 +55,9 @@ while [ $counter -le $numberOfFeatures ]; do
 	let counter=$counter+1
 done
 
-variables="echo "$variables"class >> ClassifierFiles/"$classes"_section_"$section".csv"
+variables="echo "$variables"class >> "$1"/ClassifierFiles/"$classes"_section_"$section".csv"
 
 eval $variables
 eval $shellCommand
 
-echo "ClassifierFiles/"$classes"_section_"$section".csv wrote successfully."
+echo $1"/ClassifierFiles/"$classes"_section_"$section".csv wrote successfully."
