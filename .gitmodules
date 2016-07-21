@@ -6,4 +6,4 @@
 	url = https://github.com/fabioprev/ImageExtractor.git
 [submodule "DatasetOrganizer"]
 	path = DatasetOrganizer
-	url = https://github.com/fabioprev/DatasetOrganizer.git
+	url = https://github.com/fabioprev/DatasetOrganizer
