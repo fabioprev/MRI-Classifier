@@ -1,7 +1,7 @@
 AlzheimerClassifier
 =========
 
-Thank you for using our AlzheimerClassifier software. In the case you downloaded empty directiories
+Thank you for using our AlzheimerClassifier software. In the case you downloaded empty directories
 here the solution to fix your problem. Since the Github repository contains sub-modules you need to
 recursively download it by typing the following command:
   
@@ -48,7 +48,15 @@ README.md file contained in the root directory of the software package.
 4. If features have been correctly extracted from the MRI scans you should find a directory
    called 'ClassPatientFiles' in the root directory of the data set chosen. Now, before using
    the CSV files with Weka, we need to generate a set of files, each one having a possible
-   combination of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...).
+   combination of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). In order to do
+   so, we type in the terminal the following command:
+   
+      - cd \<AlzheimerClassifier-root\>/scripts
+      - cd \<dataset-chosen\> (e.g., ADNI or OASIS)
+      - ./generateClassifierFiles.sh \<dataset-root\> \<section\> [ \<section\> ... \<section\> ]
+   
+   After this procedure you should find a directory called 'ClassifierFiles' in the root directory
+   of the data set chosen.
 
 5. The last step is open Weka, set the desidered parameters of the classifier and run it
    using one of the file generated at the previous point. We found that LIBSVM is the most
