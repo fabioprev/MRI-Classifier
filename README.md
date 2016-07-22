@@ -37,7 +37,7 @@ README.md file contained in the root directory of the software package.
 
 2. Afterwards, we have to extract the MRI patient brain scans from the data we
    organized. We therefore use the ImageExtractor software package to do this task.
-   The code has been developed by using Matlab 2012b but the code should be compatible
+   The code has been developed by using Matlab R2012b but the code should be compatible
    also with newer Matlab versions. Open Matlab and import the ImageExtractor software
    package. Then type the following command:
    
