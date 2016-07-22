@@ -1,9 +1,15 @@
 AlzheimerClassifier
 =========
 
-Thank you for using our AlzheimerClassifier software. In the case you downloaded empty directories
-here the solution to fix your problem. Since the Github repository contains sub-modules you need to
-recursively download it by typing the following command:
+# Introduction
+
+Thank you for using our AlzheimerClassifier software.
+
+# Download
+
+In the case you downloaded empty directories here the solution to fix your problem. Since
+the Github repository contains sub-modules you need to recursively download it by typing
+the following command:
   
   - cd \<AlzheimerClassifier-root\>
   - cd ..
