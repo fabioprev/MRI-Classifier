@@ -3,7 +3,17 @@ AlzheimerClassifier
 
 # Introduction
 
-Thank you for using our AlzheimerClassifier software.
+Thank you for using our AlzheimerClassifier software. This user guide is intended for all
+the users which want to learn how to use the AlzheimerClassifier tool for classifying MRI
+patient brain scans based on the patient's pathology (i.e., AD, CN, LMCI, MCI).
+
+# Input/Output
+
+The AlzheimerClassifier software package takes as input the MRI patient brain scans and
+provides as output a set of CSV files, each one having a possible combination of patient's
+disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). These files can be used with Weka to
+perform the classification task, setting the desidered parameters of the classifier chosen.
+We found that LIBSVM is the most performing classifier for this kind of task.
 
 # Download
 
@@ -53,7 +63,7 @@ README.md file contained in the root directory of the software package.
 
 4. If features have been correctly extracted from the MRI scans you should find a directory
    called 'ClassPatientFiles' in the root directory of the data set chosen. Now, before using
-   the CSV files with Weka, we need to generate a set of files, each one having a possible
+   the CSV files with Weka, we need to generate a set of CSV files, each one having a possible
    combination of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). In order to do
    so, we type in the terminal the following command:
    
