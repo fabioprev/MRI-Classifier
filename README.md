@@ -63,24 +63,24 @@ README.md file contained in the root directory of the software package.
    
         - <MyOwnDataSet>
           - <Class_1>
-            - MRI_Patient_0001
-            - MRI_Patient_0002
-            - MRI_Patient_0003
-            - ...
-            - MRI_Patient_N
+            MRI_Patient_0001
+            MRI_Patient_0002
+            MRI_Patient_0003
+            ...
+            MRI_Patient_N
           - <Class_2>
-            - MRI_Patient_0001
-            - MRI_Patient_0002
-            - MRI_Patient_0003
-            - ...
-            - MRI_Patient_M
+            MRI_Patient_0001
+            MRI_Patient_0002
+            MRI_Patient_0003
+            ...
+            MRI_Patient_M
           - ...
           - <Class_J>
-            - MRI_Patient_0001
-            - MRI_Patient_0002
-            - MRI_Patient_0003
-            - ...
-            - MRI_Patient_W
+            MRI_Patient_0001
+            MRI_Patient_0002
+            MRI_Patient_0003
+            ...
+            MRI_Patient_W
 
 2. Afterwards, we have to extract the MRI patient brain scans from the data we
    organized. We therefore use the ImageExtractor software package to do this task.
