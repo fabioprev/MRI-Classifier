@@ -49,7 +49,7 @@ Running the software is easy and straightforward. We now describe a quick guide 
 use the software, but a specific guide for each software package can be found in the
 README.md file contained in the root directory of the software package.
 
-<b>1. Data set organization: </b> We first need to organize the images we want to use based
+<b>1. Data set organization.</b> We first need to organize the images we want to use based
    on the patient's categories (i.e., AD, CN, LMCI, MCI).
    
    For the ADNI and OASIS data sets, we provide the DatasetOrganizer tool to do this task
