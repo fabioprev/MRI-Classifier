@@ -49,11 +49,11 @@ Running the software is easy and straightforward. We now describe a quick guide 
 use the software, but a specific guide for each software package can be found in the
 README.md file contained in the root directory of the software package.
 
-<b>Steps 1 and 2 are mandatory only for ADNI and OASIS data sets:</b>
-
-1. We first need to organize the data set we want to use based on the patient's
-   categories (i.e., AD, CN, LMCI, MCI). In order to do so, we have to type the 
-   following command:
+<b>1. Data set organization: </b> We first need to organize the images we want to use based
+   on the patient's categories (i.e., AD, CN, LMCI, MCI).
+   
+   For the ADNI and OASIS data sets, we provide the DatasetOrganizer tool to do this task
+   automatically. You have to type the following command in a terminal:
    
         - cd <DatasetOrganizer-root>/bin
         - ./DatasetOrganizer -d <directory-root>
