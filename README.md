@@ -32,16 +32,16 @@ In the case you downloaded empty directories here the solution to fix your probl
 the Github repository contains sub-modules you need to recursively download it by typing
 the following command:
   
-  - cd \<AlzheimerClassifier-root\>
-  - cd ..
-  - rm -rf AlzheimerClassifier
-  - git clone --recursive https://github.com/fabioprev/AlzheimerClassifier
+        - cd <AlzheimerClassifier-root>
+        - cd ..
+        - rm -rf AlzheimerClassifier
+        - git clone --recursive https://github.com/fabioprev/AlzheimerClassifier
 
 While for pulling the latest modifications to any of the sub-modules, type in the terminal:
   
-  - cd \<AlzheimerClassifier-root\>
-  - git pull
-  - git submodule foreach git pull origin master
+        - cd <AlzheimerClassifier-root>
+        - git pull
+        - git submodule foreach git pull origin master
 
 # Usage
 
@@ -55,8 +55,8 @@ Mandatory steps only for ADNI and OASIS data sets:
      categories (i.e., AD, CN, LMCI, MCI). In order to do so, we have to type the 
      following command:
      
-        - cd \<DatasetOrganizer-root\>/bin
-        - ./DatasetOrganizer -d \<directory-root\>
+        - cd <DatasetOrganizer-root>/bin
+        - ./DatasetOrganizer -d <directory-root>
   
   2. Afterwards, we have to extract the MRI patient brain scans from the data we
      organized. We therefore use the ImageExtractor software package to do this task.
@@ -64,15 +64,15 @@ Mandatory steps only for ADNI and OASIS data sets:
      also with newer Matlab versions. Open Matlab and import the ImageExtractor software
      package. Then type the following command:
      
-        - imageExtractor(\<dataset-name\>,\<dataset-path\>) - e.g., imageExtractor('adni','/home/fabio/IASI-CNR/Datasets/ADNI/')
+        - imageExtractor(<dataset-name>,<dataset-path>) - e.g., imageExtractor('adni','/home/fabio/IASI-CNR/Datasets/ADNI/')
 
 3. Now we are ready to extract ORB features from the patient MRI scans and to generate the
    CSV files for the classifier algorithm. Remember to set the correct parameters of the
    algorithm before running the code (see README.md in FeatureExtractor). Once the parameters
    have been set type the following command:
    
-      - cd \<FeatureExtractor\>/bin
-      - ./FeatureExtractor -d \<directory-root\>
+        - cd <FeatureExtractor>/bin
+        - ./FeatureExtractor -d <directory-root>
 
 4. If features have been correctly extracted from the MRI scans you should find a directory
    called 'ClassPatientFiles' in the root directory of the data set chosen. Now, before using
@@ -80,9 +80,9 @@ Mandatory steps only for ADNI and OASIS data sets:
    combination of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). In order to do
    so, we type in the terminal the following command:
    
-      - cd \<AlzheimerClassifier-root\>/scripts
-      - cd \<dataset-chosen\> (e.g., ADNI or OASIS)
-      - ./generateClassifierFiles.sh \<dataset-root\> \<section\> [ \<section\> ... \<section\> ]
+        - cd <AlzheimerClassifier-root>/scripts
+        - cd <dataset-chosen> (e.g., ADNI or OASIS)
+        - ./generateClassifierFiles.sh <dataset-root> <section> [ <section> ... <section> ]
    
    After this procedure you should find a directory called 'ClassifierFiles' in the root directory
    of the data set chosen.
