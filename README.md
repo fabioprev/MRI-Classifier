@@ -49,7 +49,7 @@ Running the software is easy and straightforward. We now describe a quick guide 
 use the software, but a specific guide for each software package can be found in the
 README.md file contained in the root directory of the software package.
 
-<b>Data set organization</b>
+<b>Data Set Organization</b>
 
    We first need to organize the images we want to use according to the patient's categories (i.e., AD,
    CN, LMCI, MCI). For the ADNI and OASIS data sets, we provide the DatasetOrganizer tool to do this
@@ -82,7 +82,7 @@ README.md file contained in the root directory of the software package.
             ...
             MRI_Patient_W
 
-<b>MRI image extraction (mandatory only for ADNI and OASIS)</b>
+<b>MRI Image Extraction (mandatory only for ADNI and OASIS)</b>
 
 Afterwards, we have to extract the MRI patient brain scans from the data we organized.
 We therefore use the ImageExtractor software package to do this task. The code has been
@@ -92,20 +92,24 @@ following command:
 
         - imageExtractor(<dataset-name>,<dataset-path>) - e.g., imageExtractor('adni','/home/fabio/IASI-CNR/Datasets/ADNI/')
 
-3. Now we are ready to extract ORB features from the patient MRI scans and to generate the
-   CSV files for the classifier algorithm. Remember to set the correct parameters of the
-   algorithm before running the code (see README.md in FeatureExtractor). Once the parameters
-   have been set type the following command:
-   
+<b>Feature Extraction</b>
+
+Now we are ready to extract ORB features from the patient MRI scans and to generate the
+CSV files for the classifier algorithm. Remember to set the correct parameters of the
+algorithm before running the code (see README.md in FeatureExtractor). Once the parameters
+have been set type the following command:
+
         - cd <FeatureExtractor>/bin
         - ./FeatureExtractor -d <directory-root>
 
-4. If features have been correctly extracted from the MRI scans you should find a directory
-   called 'ClassPatientFiles' in the root directory of the data set chosen. Now, before using
-   the CSV files with Weka, we need to generate a set of CSV files, each one having a possible
-   combination of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). In order to do
-   so, we type in the terminal the following command:
-   
+<b>Feature Extraction</b>
+
+If features have been correctly extracted from the MRI scans you should find a directory
+called 'ClassPatientFiles' in the root directory of the data set chosen. Now, before using
+the CSV files with Weka, we need to generate a set of CSV files, each one having a possible
+combination of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). In order to do
+so, we type in the terminal the following command:
+
         - cd <AlzheimerClassifier-root>/scripts
         - cd <dataset-chosen> (e.g., ADNI or OASIS)
         - ./generateClassifierFiles.sh <dataset-root> <section> [ <section> ... <section> ]
