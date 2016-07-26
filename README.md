@@ -49,14 +49,38 @@ Running the software is easy and straightforward. We now describe a quick guide 
 use the software, but a specific guide for each software package can be found in the
 README.md file contained in the root directory of the software package.
 
-<b>1. Data set organization.</b> We first need to organize the images we want to use based
-   on the patient's categories (i.e., AD, CN, LMCI, MCI).
-   
-   For the ADNI and OASIS data sets, we provide the DatasetOrganizer tool to do this task
-   automatically. You have to type the following command in a terminal:
+<b>1. Data set organization.</b>
+
+   We first need to organize the images we want to use according to the patient's categories (i.e., AD,
+   CN, LMCI, MCI). For the ADNI and OASIS data sets, we provide the DatasetOrganizer tool to do this
+   task automatically. You have to type the following command in a terminal:
    
         - cd <DatasetOrganizer-root>/bin
         - ./DatasetOrganizer -d <directory-root>
+   
+   In the case you have your own image data set, then you have to create a directory tree like the
+   following one:
+   
+        - <MyOwnDataSet>
+          - <Class_1>
+            - MRI_Patient_0001
+            - MRI_Patient_0002
+            - MRI_Patient_0003
+            - ...
+            - MRI_Patient_N
+          - <Class_2>
+            - MRI_Patient_0001
+            - MRI_Patient_0002
+            - MRI_Patient_0003
+            - ...
+            - MRI_Patient_M
+          - ...
+          - <Class_J>
+            - MRI_Patient_0001
+            - MRI_Patient_0002
+            - MRI_Patient_0003
+            - ...
+            - MRI_Patient_W
 
 2. Afterwards, we have to extract the MRI patient brain scans from the data we
    organized. We therefore use the ImageExtractor software package to do this task.
