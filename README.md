@@ -63,22 +63,22 @@ README.md file contained in the root directory of the software package.
    
         - <MyOwnDataSet>
           - <Class_1>
-            MRI_Patient_0001
-            MRI_Patient_0002
-            MRI_Patient_0003
+            MRI_Patient_1
+            MRI_Patient_2
+            MRI_Patient_3
             ...
             MRI_Patient_N
           - <Class_2>
-            MRI_Patient_0001
-            MRI_Patient_0002
-            MRI_Patient_0003
+            MRI_Patient_1
+            MRI_Patient_2
+            MRI_Patient_3
             ...
             MRI_Patient_M
           - ...
           - <Class_J>
-            MRI_Patient_0001
-            MRI_Patient_0002
-            MRI_Patient_0003
+            MRI_Patient_1
+            MRI_Patient_2
+            MRI_Patient_3
             ...
             MRI_Patient_W
 
