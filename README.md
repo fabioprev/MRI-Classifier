@@ -102,7 +102,7 @@ have been set type the following command:
         - cd <FeatureExtractor>/bin
         - ./FeatureExtractor -d <directory-root>
 
-<b>Feature Extraction</b>
+<b>Feature Matrix Generation</b>
 
 If features have been correctly extracted from the MRI scans you should find a directory
 called 'ClassPatientFiles' in the root directory of the data set chosen. Now, before using
@@ -117,9 +117,11 @@ so, we type in the terminal the following command:
    After this procedure you should find a directory called 'ClassifierFiles' in the root directory
    of the data set chosen.
 
-5. The last step is open Weka, set the desidered parameters of the classifier and run it
-   using one of the file generated at the previous point. We found that LIBSVM is the most
-   performing classifier for this kind of task.
-   
+<b>Classification</b>
+
+The last step is open Weka, set the desidered parameters of the classifier and run it
+using one of the file generated at the previous point. We found that LIBSVM is the most
+performing classifier for this kind of task.
+
 For any problem/question/suggestion please send an email to previtali@dis.uniroma1.it and
 we will be glad to help you!
