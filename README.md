@@ -49,20 +49,22 @@ Running the software is easy and straightforward. We now describe a quick guide 
 use the software, but a specific guide for each software package can be found in the
 README.md file contained in the root directory of the software package.
 
-1. We first need to organize the data set we want to use based on the patient's
-   categories (i.e., AD, CN, LMCI, MCI). In order to do so, we have to type the 
-   following command:
-   
-      - cd \<DatasetOrganizer-root\>/bin
-      - ./DatasetOrganizer -d \<directory-root\>
+Mandatory steps only for ADNI and OASIS data sets:
 
-2. Afterwards, we have to extract the MRI patient brain scans from the data we
-   organized. We therefore use the ImageExtractor software package to do this task.
-   The code has been developed by using Matlab R2012b but the code should be compatible
-   also with newer Matlab versions. Open Matlab and import the ImageExtractor software
-   package. Then type the following command:
-   
-      - imageExtractor(\<dataset-name\>,\<dataset-path\>) - e.g., imageExtractor('adni','/home/fabio/IASI-CNR/Datasets/ADNI/')
+  1. We first need to organize the data set we want to use based on the patient's
+     categories (i.e., AD, CN, LMCI, MCI). In order to do so, we have to type the 
+     following command:
+     
+        - cd \<DatasetOrganizer-root\>/bin
+        - ./DatasetOrganizer -d \<directory-root\>
+  
+  2. Afterwards, we have to extract the MRI patient brain scans from the data we
+     organized. We therefore use the ImageExtractor software package to do this task.
+     The code has been developed by using Matlab R2012b but the code should be compatible
+     also with newer Matlab versions. Open Matlab and import the ImageExtractor software
+     package. Then type the following command:
+     
+        - imageExtractor(\<dataset-name\>,\<dataset-path\>) - e.g., imageExtractor('adni','/home/fabio/IASI-CNR/Datasets/ADNI/')
 
 3. Now we are ready to extract ORB features from the patient MRI scans and to generate the
    CSV files for the classifier algorithm. Remember to set the correct parameters of the
