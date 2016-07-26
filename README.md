@@ -9,11 +9,22 @@ patient brain scans based on the patient's pathology (i.e., AD, CN, LMCI, MCI).
 
 # Input/Output
 
-The AlzheimerClassifier software package takes as input the MRI patient brain scans and
-provides as output a set of CSV files, each one having a possible combination of patient's
-disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). These files can be used with Weka to
-perform the classification task, setting the desidered parameters of the classifier chosen.
-We found that LIBSVM is the most performing classifier for this kind of task.
+The AlzheimerClassifier software package takes as input the MRI patient brain scans
+(i.e., for ADNI the *.nii files, for OASIS the *.hdr and *.img files). In the case, you
+have your own image files, the image formats supported by our software are:
+
+  - Windows Bitmaps (*.bmp, *.dib)
+  - JPEG files (*.jpeg, *.jpg, *.jpe)
+  - JPEG 2000 files (*.jp2)
+  - Portable Network Graphics (*.png)
+  - Portable image format (*.pbm, *.pgm, *.ppm)
+  - Sun rasters (*.sr, *.ras)
+  - TIFF files (*.tiff, *.tif)
+
+The software provides as output a set of CSV files, each one having a possible combination
+of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). These files can be used with
+Weka to perform the classification task, setting the desidered parameters of the classifier
+chosen. We found that LIBSVM is the most performing classifier for this kind of task.
 
 # Download
 
