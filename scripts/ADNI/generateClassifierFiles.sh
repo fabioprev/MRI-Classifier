@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script should NOT be modified by non expert users. Modifying it is quote risky so watch out!
+# This script should NOT be modified by non expert users. Modifying it is quite risky so watch out!
 
 if [ $# -lt 2 ]; then
 	echo "Usage: ./generateClassifierFiles.sh <dataset-root> <section> [ <section> ... <section> ]"
