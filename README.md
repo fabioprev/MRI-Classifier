@@ -114,8 +114,15 @@ so, we type in the terminal the following command:
         - cd <dataset-chosen> (e.g., ADNI or OASIS)
         - ./generateClassifierFiles.sh <dataset-root> <section> [ <section> ... <section> ]
    
-   After this procedure you should find a directory called 'ClassifierFiles' in the root directory
-   of the data set chosen.
+After this procedure you should find a directory called 'ClassifierFiles' in the root directory
+of the data set chosen.
+
+If you are using your own data set, we provide a script to generate all possible combination
+between classes without however generating the CSV files which is left to the user. In order to
+use the script type the following command:
+
+        - cd <AlzheimerClassifier-root>/scripts/Utils
+        - ./generateClassCombinations.sh <dataset-root>
 
 <b>Classification</b>
 
