@@ -1,15 +1,15 @@
-AlzheimerClassifier
+MRI-Classifier
 =========
 
 # Introduction
 
-Thank you for using our AlzheimerClassifier software. This user guide is intended for all
-the users which want to learn how to use the AlzheimerClassifier tool for classifying MRI
+Thank you for using our MRI-Classifier software. This user guide is intended for all
+the users which want to learn how to use the MRI-Classifier tool for classifying MRI
 patient brain scans based on the patient's pathology (i.e., AD, CN, LMCI, MCI).
 
 # Input/Output
 
-The AlzheimerClassifier software package takes as input the MRI patient brain scans
+The MRI-Classifier software package takes as input the MRI patient brain scans
 (i.e., for ADNI the *.nii files, for OASIS the *.hdr and *.img files). In the case, you
 have your own image files, the image formats supported by our software are:
 
@@ -32,14 +32,14 @@ In the case you downloaded empty directories here the solution to fix your probl
 the Github repository contains sub-modules you need to recursively download it by typing
 the following command:
   
-        - cd <AlzheimerClassifier-root>
+        - cd <MRI-Classifier-root>
         - cd ..
-        - rm -rf AlzheimerClassifier
-        - git clone --recursive https://github.com/fabioprev/AlzheimerClassifier
+        - rm -rf MRI-Classifier
+        - git clone --recursive https://github.com/fabioprev/MRI-Classifier
 
 While for pulling the latest modifications to any of the sub-modules, type in the terminal:
   
-        - cd <AlzheimerClassifier-root>
+        - cd <MRI-Classifier-root>
         - git pull
         - git submodule foreach git pull origin master
 
@@ -110,7 +110,7 @@ the CSV files with Weka, we need to generate a set of CSV files, each one having
 combination of patient's disease (e.g., ADvsCN, ADvsCNvsMCI, CNvsMCI, ...). In order to do
 so, we type in the terminal the following command:
 
-        - cd <AlzheimerClassifier-root>/scripts
+        - cd <MRI-Classifier-root>/scripts
         - cd <dataset-chosen> (e.g., ADNI or OASIS)
         - ./generateClassifierFiles.sh <dataset-root> <section> [ <section> ... <section> ]
    
@@ -121,7 +121,7 @@ If you are using your own data set, we provide a script to generate all possible
 between classes without generating the CSV files which is left to the user. In order to use the
 script type the following command:
 
-        - cd <AlzheimerClassifier-root>/scripts/Utils
+        - cd <MRI-Classifier-root>/scripts/Utils
         - ./generateClassCombinations.sh <dataset-root>
 
 <b>Classification</b>
